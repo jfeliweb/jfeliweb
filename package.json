@@ -8,7 +8,7 @@
     "dev:spotlight": "npx @spotlightjs/spotlight",
     "dev:next": "next dev",
     "dev": "run-p db-server:file dev:*",
-    "build:next": "next build --webpack",
+    "build:next": "next build --webpack && node scripts/fix-netlify-proxy.js",
     "build-local": "run-p db-server:memory build:next --race",
     "build": "run-s db:migrate build:next",
     "start": "next start",
