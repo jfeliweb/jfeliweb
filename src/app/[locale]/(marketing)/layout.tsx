@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { setRequestLocale } from 'next-intl/server';
 
 export default async function Layout(props: {
@@ -8,5 +9,10 @@ export default async function Layout(props: {
   setRequestLocale(locale);
 
   // Marketing layout - children use SiteLayout which provides its own navigation
-  return <>{props.children}</>;
+  return (
+    <>
+      {props.children}
+      <Analytics />
+    </>
+  );
 }
