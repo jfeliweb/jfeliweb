@@ -383,3 +383,4 @@ Licensed under the MIT License, Copyright © 2025
 ---
 
 Built with ❤️ by jFeliWeb Creator Studio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c7e4ca6c-1ec1-4b6c-80e4-9bb3ac24401c/deploy-status)](https://app.netlify.com/projects/jfeliweb/deploys)
