@@ -12,6 +12,9 @@ const baseConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   reactCompiler: true,
+  // Explicitly do not use standalone output for Netlify deployment
+  // The @netlify/plugin-nextjs handles server files automatically
+  // output: 'standalone' is not set to allow Netlify plugin to manage server runtime
   outputFileTracingIncludes: {
     '/': ['./migrations/**/*'],
   },
