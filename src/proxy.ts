@@ -34,14 +34,12 @@ const aj = arcjet.withRule(
   }),
 );
 
-// Currently, with database connections, Webpack is faster than Turbopack in production environment at runtime.
-// Then, unfortunately, Webpack doesn't support `proxy.ts` on Vercel yet, here is the error: "Error: ENOENT: no such file or directory, lstat '/vercel/path0/.next/server/proxy.js'"
-export default async function middleware(
+export default async function proxy(
   request: NextRequest,
   event: NextFetchEvent,
 ) {
   // Verify the request with Arcjet
-  // Use `process.env` instead of Env to reduce bundle size in middleware
+  // Use `process.env` instead of Env to reduce bundle size in proxy
   if (process.env.ARCJET_KEY) {
     const decision = await aj.protect(request);
 
@@ -50,7 +48,7 @@ export default async function middleware(
     }
   }
 
-  // Clerk keyless mode doesn't work with i18n, this is why we need to run the middleware conditionally
+  // Clerk keyless mode doesn't work with i18n, this is why we need to run the proxy conditionally
   if (
     isAuthPage(request) || isProtectedRoute(request)
   ) {
