@@ -1,0 +1,199 @@
+@layer theme, base, clerk, components, utilities; /* Ensure Clerk is compatible with Tailwind CSS v4 */
+
+@import 'tailwindcss';
+
+@theme {
+  /* Colors */
+  --color-neon-pink: #fc3fd9;
+  --color-neonPink: #fc3fd9;
+  --color-aqua: #38fdfd;
+  --color-navy-black: #0f172a;
+  --color-pure-white: #ffffff;
+  --color-slate-light: #f1f5f9;
+  --color-blue-grey: #1e293b;
+  --color-dark-purple: #3f3d56;
+  --color-pink-glow: rgba(252, 63, 217, 0.65);
+  --color-aqua-glow: rgba(56, 253, 253, 0.65);
+  --color-purple-glow: rgba(127, 63, 255, 0.45);
+  --color-purpleGlow: rgba(127, 63, 255, 0.45);
+
+  /* Font Families */
+  --font-heading: 'Sora', 'Lexend', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Font Sizes */
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.25rem;
+  --font-size-h3: 1.75rem;
+  --font-size-h4: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+
+  /* Border Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --shadow-deep: 0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow-pink: 0 0 25px rgba(252, 63, 217, 0.55);
+  --shadow-glow-aqua: 0 0 25px rgba(56, 253, 253, 0.55);
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.6s ease-out;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base Styles */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Reset margins and padding on specific elements, not all elements */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  ul,
+  ol,
+  li,
+  figure,
+  figcaption,
+  dl,
+  dd {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-navy-black);
+  color: var(--color-slate-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+/* Utility Classes */
+.bg-card-gradient {
+  background: linear-gradient(
+    145deg,
+    rgba(16, 30, 47, 0.95) 0%,
+    rgba(26, 22, 56, 0.9) 50%,
+    rgba(63, 61, 86, 0.85) 100%
+  );
+}
+
+.bg-button-primary {
+  background: linear-gradient(135deg, #38fdfd 0%, #fc3fd9 100%);
+}
+
+.bg-button-secondary {
+  background: linear-gradient(135deg, rgba(56, 253, 253, 0.4) 0%, rgba(252, 63, 217, 0.35) 100%);
+}
+
+.bg-surface-glow {
+  background: radial-gradient(circle at top, rgba(252, 63, 217, 0.35), rgba(0, 0, 0, 0));
+}
+
+.bg-header-bg {
+  background: linear-gradient(180deg, #0f172a 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.backdrop-blur-surface {
+  backdrop-filter: blur(18px);
+}
+
+.backdrop-blur-frosted {
+  backdrop-filter: blur(26px);
+}
+
+/* Animations */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out;
+}
+
+@layer utilities {
+  .neon-underline {
+    position: relative;
+  }
+
+  .neon-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #38fdfd, #fc3fd9);
+    box-shadow: 0 0 10px rgba(56, 253, 253, 0.5);
+  }
+}

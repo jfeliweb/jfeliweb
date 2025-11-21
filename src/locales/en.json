@@ -1,0 +1,132 @@
+{
+  "RootLayout": {
+    "home_link": "Home",
+    "about_link": "About",
+    "projects_link": "Projects",
+    "blog_link": "Blog",
+    "labs_link": "Labs",
+    "tools_link": "Tools",
+    "contact_link": "Contact",
+    "sign_in_link": "Sign in",
+    "sign_up_link": "Sign up"
+  },
+  "BaseTemplate": {
+    "description": "jFeliWeb Creator Studio - Building innovative tools, projects, and experiments at the intersection of design and development.",
+    "made_with": "Made with <author></author>."
+  },
+  "Index": {
+    "meta_title": "jFeliWeb Creator Studio",
+    "meta_description": "Building innovative tools, projects, and experiments at the intersection of design and development.",
+    "hero_title": "jFeliWeb Creator Studio",
+    "hero_subtitle": "Building innovative tools, projects, and experiments at the intersection of design and development.",
+    "badge_available": "Available for Hire",
+    "cta_get_in_touch": "Get In Touch",
+    "cta_view_projects": "View Projects",
+    "featured_projects_title": "Featured Projects",
+    "featured_projects_description": "A showcase of past work and personal development projects.",
+    "cta_view_all_projects": "View All Projects",
+    "articles_title": "Articles & News",
+    "articles_description": "Latest insights, tutorials, and thoughts on design, development, and creativity",
+    "cta_browse_articles": "Browse Articles"
+  },
+  "About": {
+    "meta_title": "About | jFeliWeb Creator Studio",
+    "meta_description": "Learn more about jFeliWeb Creator Studio, our mission, skills, and philosophy.",
+    "page_title": "About jFeliWeb",
+    "skills_title": "Skills",
+    "connect_title": "Connect",
+    "philosophy_title": "Philosophy",
+    "coming_soon": "About content coming soon."
+  },
+  "Projects": {
+    "meta_title": "Projects | jFeliWeb Creator Studio",
+    "meta_description": "A showcase of past work and personal development projects. Explore our portfolio of creative solutions.",
+    "page_title": "Projects",
+    "page_description": "A showcase of past work and personal development projects.",
+    "no_projects": "No projects available at the moment.",
+    "check_back_soon": "Check back soon for new additions!"
+  },
+  "Blog": {
+    "meta_title": "Blog | jFeliWeb Creator Studio",
+    "meta_description": "Thoughts, tutorials, and insights on web development, design, and technology.",
+    "page_title": "Blog",
+    "page_description": "Thoughts, tutorials, and insights on web development, design, and technology.",
+    "no_posts": "No blog posts available at the moment.",
+    "check_back_soon": "Check back soon for new articles!"
+  },
+  "Labs": {
+    "meta_title": "Labs | jFeliWeb Creator Studio",
+    "meta_description": "Experimental concepts, prototypes, and work-in-progress projects. Explore our creative experiments.",
+    "page_title": "Labs",
+    "page_description": "Experimental concepts, prototypes, and work-in-progress projects.",
+    "no_labs": "No lab experiments available at the moment.",
+    "check_back_soon": "Check back soon for new experiments!"
+  },
+  "Tools": {
+    "meta_title": "Tools & Apps | jFeliWeb Creator Studio",
+    "meta_description": "Explore our collection of innovative tools and applications designed to enhance your workflow and boost productivity.",
+    "page_title": "Tools & Apps",
+    "page_description": "Explore our collection of innovative tools and applications designed to enhance your workflow.",
+    "no_tools": "No tools available at the moment.",
+    "check_back_soon": "Check back soon for new additions!"
+  },
+  "Contact": {
+    "meta_title": "Contact | jFeliWeb Creator Studio",
+    "meta_description": "Get in touch with jFeliWeb Creator Studio. Have a question or want to collaborate? Send us a message.",
+    "page_title": "Get in Touch",
+    "page_subtitle": "Have a question or want to collaborate? Send me a message.",
+    "form_name_label": "Name",
+    "form_name_placeholder": "Your name",
+    "form_email_label": "Email",
+    "form_email_placeholder": "your.email@example.com",
+    "form_message_label": "Message",
+    "form_message_placeholder": "Your message...",
+    "form_submit": "Send Message",
+    "form_submitting": "Sending...",
+    "form_success": "Message sent successfully! I'll get back to you soon.",
+    "form_error": "Failed to send message. Please try again.",
+    "form_spam_detected": "Spam detected",
+    "social_title": "Or connect with me on social media"
+  },
+  "Counter": {
+    "meta_title": "Counter",
+    "meta_description": "An example of DB operation",
+    "security_powered_by": "Security, bot detection and rate limiting powered by"
+  },
+  "CounterForm": {
+    "presentation": "The counter is stored in the database and incremented by the value you provide.",
+    "label_increment": "Increment by",
+    "button_increment": "Increment",
+    "error_increment_range": "Value must be between 1 and 3"
+  },
+  "CurrentCount": {
+    "count": "Count: {count}"
+  },
+  "SignIn": {
+    "meta_title": "Sign in",
+    "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
+  },
+  "SignUp": {
+    "meta_title": "Sign up",
+    "meta_description": "Effortlessly create an account through our intuitive sign-up process."
+  },
+  "Dashboard": {
+    "meta_title": "Dashboard",
+    "hello_message": "Hello {email}!",
+    "alternative_message": "Need advanced features? Multi-tenancy & Teams, Roles & Permissions, Shadcn UI, End-to-End Typesafety with oRPC, Stripe Payment, Light / Dark mode. Try <url></url>."
+  },
+  "UserProfile": {
+    "meta_title": "User Profile"
+  },
+  "DashboardLayout": {
+    "dashboard_link": "Dashboard",
+    "user_profile_link": "Manage your account",
+    "sign_out": "Sign out"
+  },
+  "Navigation": {
+    "toggle_menu": "Toggle menu"
+  },
+  "Footer": {
+    "copyright": "© {year} jFeliWeb Creator Studio. All rights reserved."
+  }
+}

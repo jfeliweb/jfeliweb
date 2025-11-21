@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "projectName": "jFeliWeb - Miami Neon Creator Studio",
+  "description": "Cursor integration for the jFeliWeb Miami Neon design system. Includes component rules, color tokens, gradients, typography, shadows, and generation logic.",
+
+  "designSystem": {
+    "globalTokens": {
+      "colors": {
+        "primary": {
+          "neonPink": "#fc3fd9",
+          "aqua": "#38fdfd",
+          "navyBlack": "#0f172a",
+          "pureWhite": "#ffffff"
+        },
+        "secondary": {
+          "slateLight": "#f1f5f9",
+          "blueGrey": "#1e293b",
+          "darkPurple": "#3f3d56"
+        },
+        "neonGlows": {
+          "pinkGlow": "rgba(252, 63, 217, 0.65)",
+          "aquaGlow": "rgba(56, 253, 253, 0.65)",
+          "purpleGlow": "rgba(127, 63, 255, 0.45)"
+        }
+      },
+
+      "gradients": {
+        "card": "linear-gradient(145deg, rgba(16,30,47,0.95) 0%, rgba(26,22,56,0.9) 50%, rgba(63,61,86,0.85) 100%)",
+        "buttonPrimary": "linear-gradient(135deg, #38fdfd 0%, #fc3fd9 100%)",
+        "buttonSecondary": "linear-gradient(135deg, rgba(56,253,253,0.4) 0%, rgba(252,63,217,0.35) 100%)",
+        "surfaceGlow": "radial-gradient(circle at top, rgba(252,63,217,0.35), rgba(0,0,0,0))",
+        "headerBG": "linear-gradient(180deg, #0f172a 0%, rgba(15,23,42,0.8) 100%)"
+      },
+
+      "fontFamilies": {
+        "heading": "Sora, Lexend, sans-serif",
+        "body": "Inter, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+
+      "fontSizes": {
+        "h1": "3rem",
+        "h2": "2.25rem",
+        "h3": "1.75rem",
+        "h4": "1.5rem",
+        "body": "1rem",
+        "caption": "0.875rem"
+      },
+
+      "radii": {
+        "xs": "6px",
+        "sm": "10px",
+        "md": "16px",
+        "lg": "22px",
+        "xl": "32px",
+        "pill": "999px"
+      },
+
+      "shadows": {
+        "soft": "0 4px 20px rgba(0,0,0,0.45)",
+        "deep": "0 8px 40px rgba(0,0,0,0.6)",
+        "glowPink": "0 0 25px rgba(252,63,217,0.55)",
+        "glowAqua": "0 0 25px rgba(56,253,253,0.55)"
+      },
+
+      "blur": {
+        "surface": "backdrop-filter: blur(18px)",
+        "frosted": "backdrop-filter: blur(26px)"
+      }
+    },
+
+    "elementRules": {
+      "cards": {
+        "background": "@gradients.card",
+        "border": "1px solid rgba(255,255,255,0.06)",
+        "shadow": "@shadows.soft",
+        "radius": "@radii.lg",
+        "padding": "24px",
+        "blur": "@blur.surface",
+        "contentColor": "rgba(241,245,249,0.8)",
+        "icon": {
+          "fill": "@colors.primary.pureWhite",
+          "background": "rgba(255,255,255,0.05)",
+          "radius": "@radii.md"
+        },
+        "hover": {
+          "shadow": "@shadows.deep",
+          "glow": "@shadows.glowAqua",
+          "transform": "translateY(-4px)"
+        }
+      },
+
+      "buttons": {
+        "primary": {
+          "background": "@gradients.buttonPrimary",
+          "textColor": "#0f172a",
+          "radius": "@radii.pill",
+          "padding": "12px 24px",
+          "shadow": "@shadows.glowAqua",
+          "hover": {
+            "background": "@gradients.buttonSecondary",
+            "textColor": "#ffffff",
+            "shadow": "@shadows.glowPink"
+          },
+          "active": {
+            "scale": 0.96
+          },
+          "disabled": {
+            "opacity": 0.5,
+            "shadow": "none",
+            "cursor": "not-allowed"
+          }
+        },
+
+        "secondary": {
+          "background": "rgba(56,253,253,0.15)",
+          "textColor": "@colors.primary.aqua",
+          "border": "1px solid rgba(56,253,253,0.3)",
+          "radius": "@radii.pill",
+          "hover": {
+            "background": "rgba(56,253,253,0.25)"
+          }
+        }
+      },
+
+      "navbar": {
+        "background": "@gradients.headerBG",
+        "linkColor": "rgba(255,255,255,0.75)",
+        "linkActiveColor": "@colors.primary.aqua",
+        "linkHoverColor": "#ffffff",
+        "iconColor": "@colors.primary.aqua"
+      },
+
+      "tags": {
+        "background": "rgba(255,255,255,0.07)",
+        "textColor": "@colors.secondary.slateLight",
+        "border": "1px solid rgba(255,255,255,0.1)",
+        "radius": "@radii.pill"
+      },
+
+      "charts": {
+        "donutStart": "#38fdfd",
+        "donutEnd": "#fc3fd9",
+        "labelColor": "rgba(241,245,249,0.8)"
+      }
+    },
+
+    "doNotRules": [
+      "DO NOT apply gradients to icons. Icons must use solid fills only.",
+      "DO NOT apply card background gradients to buttons.",
+      "DO NOT use neonPink (#fc3fd9) or aqua (#38fdfd) as body text.",
+      "DO NOT apply glow shadows to paragraph text.",
+      "DO NOT use button gradients on containers or cards.",
+      "DO NOT place aqua (#38fdfd) text on neonPink (#fc3fd9) backgrounds.",
+      "DO NOT apply surface blur to buttons—use only on cards and panels.",
+      "DO NOT use shadows on inline elements or text."
+    ]
+  },
+
+  "generationRules": {
+    "componentsMustUseDesignSystem": true,
+    "cssFramework": "TailwindCSS",
+    "tailwindMapping": {
+      "primaryPink": "text-[#fc3fd9]",
+      "primaryAqua": "text-[#38fdfd]",
+      "bgNavyBlack": "bg-[#0f172a]"
+    },
+
+    "layoutRules": {
+      "rootBackground": "bg-[#0f172a]",
+      "sectionPadding": "py-20 px-6 md:px-12"
+    },
+
+    "componentGeneration": {
+      "buttons": {
+        "defaultTo": "primary",
+        "mustInclude": ["gradient", "pill-radius", "neon-glow"]
+      },
+      "cards": {
+        "defaultShadow": "@shadows.soft",
+        "mustInclude": ["gradient-bg", "blur-surface"],
+        "hoverEffects": ["glowAqua", "lift"]
+      }
+    }
+  }
+}
